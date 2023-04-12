@@ -56,7 +56,24 @@
 // - 3->нет
 // 7->нет
 
+// Console.Write("Enter the number: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// string result = number % 2 == 0 ? "Yes" : "No";
+// Console.WriteLine($"{result}");
+
+
+// Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе
+// показывает все чётные числа от 1 до N.
+
+// 5 -> 2, 4
+// 8 -> 2, 4, 6, 8
+
 Console.Write("Enter the number: ");
 int number = Convert.ToInt32(Console.ReadLine());
-string result = number % 2 == 0 ? "Yes" : "No";
-Console.WriteLine($"{result}");
+
+int i = 2;
+while (i <= number)
+{
+  Console.Write($"{i} ");
+  i += 2;
+}
