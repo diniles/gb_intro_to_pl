@@ -68,12 +68,12 @@
 // 5 -> 2, 4
 // 8 -> 2, 4, 6, 8
 
-Console.Write("Enter the number: ");
-int number = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Enter the number: ");
+// int number = Convert.ToInt32(Console.ReadLine());
 
-int i = 2;
-while (i <= number)
-{
-  Console.Write($"{i} ");
-  i += 2;
-}
+// int i = 2;
+// while (i <= number)
+// {
+//   Console.Write($"{i} ");
+//   i += 2;
+// }
