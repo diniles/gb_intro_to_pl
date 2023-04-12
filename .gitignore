@@ -1,6 +1,7 @@
 bin/
 obj/
 .vscode/
+to_check/
 *.jpg
 *.lnk
 *.zip
