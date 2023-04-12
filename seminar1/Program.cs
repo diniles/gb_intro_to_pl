@@ -30,21 +30,33 @@
 // 22 3 9 -> 22
 
 //P.S. Я не рассматривал случаи, когда все или некоторые из чисел равны, но, если надо, могу переделать.
-Console.Write("Enter first number: ");
-int firstNum = Convert.ToInt32(Console.ReadLine());
-Console.Write("Enter second number: ");
-int secondNum = Convert.ToInt32(Console.ReadLine());
-Console.Write("Enter third number: ");
-int thirdNum = Convert.ToInt32(Console.ReadLine());
-if (firstNum > secondNum && firstNum > thirdNum)
-{
-  Console.WriteLine($"The first number {firstNum} is biggest.");
-}
-if (secondNum > firstNum && secondNum > thirdNum)
-{
-  Console.WriteLine($"The second number {secondNum} is biggest.");
-}
-if (thirdNum > firstNum && thirdNum > secondNum)
-{
-  Console.WriteLine($"The third number {thirdNum} is biggest.");
-}
+// Console.Write("Enter first number: ");
+// int firstNum = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Enter second number: ");
+// int secondNum = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Enter third number: ");
+// int thirdNum = Convert.ToInt32(Console.ReadLine());
+// if (firstNum > secondNum && firstNum > thirdNum)
+// {
+//   Console.WriteLine($"The first number {firstNum} is biggest.");
+// }
+// if (secondNum > firstNum && secondNum > thirdNum)
+// {
+//   Console.WriteLine($"The second number {secondNum} is biggest.");
+// }
+// if (thirdNum > firstNum && thirdNum > secondNum)
+// {
+//   Console.WriteLine($"The third number {thirdNum} is biggest.");
+// }
+
+// Задача 6: Напишите программу, которая на вход принимает число и выдаёт,
+// является ли число чётным (делится ли оно на два без остатка).
+
+// 4->да
+// - 3->нет
+// 7->нет
+
+Console.Write("Enter the number: ");
+int number = Convert.ToInt32(Console.ReadLine());
+string result = number % 2 == 0 ? "Yes" : "No";
+Console.WriteLine($"{result}");
