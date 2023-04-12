@@ -37,23 +37,23 @@
 // 7 -> да
 // 1 -> нет
 
-Console.Write("Enter the number: ");
-string dayNumber = Console.ReadLine();
+// Console.Write("Enter the number: ");
+// string dayNumber = Console.ReadLine();
 
-switch (dayNumber)
-{
-  case "1":
-  case "2":
-  case "3":
-  case "4":
-  case "5":
-    Console.WriteLine("No");
-    break;
-  case "6":
-  case "7":
-    Console.WriteLine("Yes");
-    break;
-  default:
-    Console.WriteLine("Wrong day number!");
-    break;
-}
+// switch (dayNumber)
+// {
+//   case "1":
+//   case "2":
+//   case "3":
+//   case "4":
+//   case "5":
+//     Console.WriteLine("No");
+//     break;
+//   case "6":
+//   case "7":
+//     Console.WriteLine("Yes");
+//     break;
+//   default:
+//     Console.WriteLine("Wrong day number!");
+//     break;
+// }
