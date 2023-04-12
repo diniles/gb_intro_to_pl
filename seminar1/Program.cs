@@ -12,13 +12,19 @@ int secondNum = Convert.ToInt32(Console.ReadLine());
 
 if (firstNum > secondNum)
 {
-  Console.WriteLine($"The first number {firstNum} is bigger.");
+  Console.WriteLine($"The first number {firstNum} is bigger than second number {secondNum}.");
 }
 else if (firstNum < secondNum)
 {
-  Console.WriteLine($"The second number {secondNum} is bigger.");
+  Console.WriteLine($"The second number {secondNum} is bigger than first number {firstNum}.");
 }
 else
 {
   Console.WriteLine("The numbers are equal.");
 }
+
+// Задача 4: Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
+
+// 2, 3, 7 -> 7
+// 44 5 78 -> 78
+// 22 3 9 -> 22
