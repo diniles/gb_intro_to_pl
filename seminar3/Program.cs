@@ -64,10 +64,10 @@
 // 3 -> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
-Console.Write("Enter the number: ");
-int num = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Enter the number: ");
+// int num = Convert.ToInt32(Console.ReadLine());
 
-for (int i = 1; i <= num; i++)
-{
-  Console.Write($"{Math.Pow(i, 3)} ");
-}
+// for (int i = 1; i <= num; i++)
+// {
+//   Console.Write($"{Math.Pow(i, 3)} ");
+// }
