@@ -51,29 +51,29 @@
 
 // 6, 1, 33-> [6, 1, 33]
 
-string[] array = new string[8];
+// string[] array = new string[8];
 
 
-fillArray();
-printArray(array);
+// fillArray();
+// printArray(array);
 
 
-void fillArray()
-{
-  for (int i = 0; i < 8; i++)
-  {
-    Console.Write("Enter a number: ");
-    array[i] = Console.ReadLine();
-  }
+// void fillArray()
+// {
+//   for (int i = 0; i < 8; i++)
+//   {
+//     Console.Write("Enter a number: ");
+//     array[i] = Console.ReadLine();
+//   }
 
-}
+// }
 
-void printArray(string[] array)
-{
-  Console.Write("[");
-  foreach (var item in array)
-  {
-    Console.Write($"{item}, ");
-  }
-  Console.Write("\b\b]");
-}
+// void printArray(string[] array)
+// {
+//   Console.Write("[");
+//   foreach (var item in array)
+//   {
+//     Console.Write($"{item}, ");
+//   }
+//   Console.Write("\b\b]");
+// }
