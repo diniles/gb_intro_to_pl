@@ -29,15 +29,51 @@
 
 // 9012 -> 12
 
-Console.Write("Enter a number: ");
-int number = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Enter a number: ");
+// int number = Convert.ToInt32(Console.ReadLine());
 
-int sum = 0;
+// int sum = 0;
 
-while (number > 0)
+// while (number > 0)
+// {
+//   sum += number % 10;
+//   number /= 10;
+// }
+
+// Console.WriteLine(sum);
+
+// ===============================================================================
+
+// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их
+//  на экран.
+
+// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+
+// 6, 1, 33-> [6, 1, 33]
+
+string[] array = new string[8];
+
+
+fillArray();
+printArray(array);
+
+
+void fillArray()
 {
-  sum += number % 10;
-  number /= 10;
+  for (int i = 0; i < 8; i++)
+  {
+    Console.Write("Enter a number: ");
+    array[i] = Console.ReadLine();
+  }
+
 }
 
-Console.WriteLine(sum);
+void printArray(string[] array)
+{
+  Console.Write("[");
+  foreach (var item in array)
+  {
+    Console.Write($"{item}, ");
+  }
+  Console.Write("\b\b]");
+}
