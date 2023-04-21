@@ -26,23 +26,23 @@
 
 // refactoring rask 25:
 
-int toPower(int number, int power)
-{
-  int i = 1;
-  int result = 1;
-  while (i <= power)
-  {
-    result *= number;
-    i++;
-  }
-  return result;
-}
+// int toPower(int number, int power)
+// {
+//   int i = 1;
+//   int result = 1;
+//   while (i <= power)
+//   {
+//     result *= number;
+//     i++;
+//   }
+//   return result;
+// }
 
-int number = prompt("Enter a number");
-int power = prompt("Enter a power");
+// int number = prompt("Enter a number");
+// int power = prompt("Enter a power");
 
-int result = toPower(number, power);
-Console.WriteLine(result);
+// int result = toPower(number, power);
+// Console.WriteLine(result);
 
 // ===============================================================================
 
@@ -67,6 +67,26 @@ Console.WriteLine(result);
 // }
 
 // Console.WriteLine(sum);
+
+// refactoring task 27:
+
+int sumOfNumbers(int number)
+{
+  int sum = 0;
+
+  while (number > 0)
+  {
+    sum += number % 10;
+    number /= 10;
+  }
+  return sum;
+}
+
+int number = prompt("Enter a number");
+
+int result = sumOfNumbers(number);
+
+Console.WriteLine(result);
 
 // ===============================================================================
 
