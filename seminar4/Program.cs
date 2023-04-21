@@ -126,30 +126,30 @@
 
 // refactoring task 29:
 
-int[] fillArray(int size, int min, int max)
-{
-  int[] array = new int[size];
-  Random randomNumber = new Random();
-  for (int i = 0; i < size; i++)
-  {
-    array[i] = randomNumber.Next(min, max + 1);
-  }
-  return array;
-}
+// int[] fillArray(int size, int min, int max)
+// {
+//   int[] array = new int[size];
+//   Random randomNumber = new Random();
+//   for (int i = 0; i < size; i++)
+//   {
+//     array[i] = randomNumber.Next(min, max + 1);
+//   }
+//   return array;
+// }
 
-void printArray(int[] array)
-{
-  Console.Write("[");
-  foreach (var item in array)
-  {
-    Console.Write($"{item}, ");
-  }
-  Console.Write("\b\b]");
-}
+// void printArray(int[] array)
+// {
+//   Console.Write("[");
+//   foreach (var item in array)
+//   {
+//     Console.Write($"{item}, ");
+//   }
+//   Console.Write("\b\b]");
+// }
 
-int size = prompt("Enter size of array");
-int min = prompt("Enter minimum number for random function");
-int max = prompt("Enter maximum number for random function");
+// int size = prompt("Enter size of array");
+// int min = prompt("Enter minimum number for random function");
+// int max = prompt("Enter maximum number for random function");
 
-int[] array = fillArray(size, min, max);
-printArray(array);
+// int[] array = fillArray(size, min, max);
+// printArray(array);
