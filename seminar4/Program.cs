@@ -24,6 +24,26 @@
 // }
 // Console.WriteLine(result);
 
+// refactoring rask 25:
+
+int toPower(int number, int power)
+{
+  int i = 1;
+  int result = 1;
+  while (i <= power)
+  {
+    result *= number;
+    i++;
+  }
+  return result;
+}
+
+int number = prompt("Enter a number");
+int power = prompt("Enter a power");
+
+int result = toPower(number, power);
+Console.WriteLine(result);
+
 // ===============================================================================
 
 // Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму
