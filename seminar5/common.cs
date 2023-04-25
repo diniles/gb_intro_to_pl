@@ -2,14 +2,14 @@
 
 public class Common
 {
-  public int prompt(string prompt)
+  public static int prompt(string prompt)
   {
     Console.Write($"{prompt}: ");
     string input = Console.ReadLine();
     return int.Parse(input);
   }
 
-  public int[] fillArrayOfInts(int size, int min, int max)
+  public static int[] fillArrayOfInts(int size, int min, int max)
   {
     int[] array = new int[size];
     Random randomNumber = new Random();
@@ -20,7 +20,7 @@ public class Common
     return array;
   }
 
-  public double[] fillArrayOfDoubles(int size)
+  public static double[] fillArrayOfDoubles(int size)
   {
     double[] array = new double[size];
     Random randomNumber = new Random();
@@ -31,14 +31,14 @@ public class Common
     return array;
   }
 
-  public void printArray(int[] array)
+  public static void printArray(int[] array)
   {
+    Console.WriteLine("This is your array:");
     Console.Write("[");
     foreach (var item in array)
     {
       Console.Write($"{item}, ");
     }
-    Console.Write("\b\b]");
+    Console.WriteLine("\b\b]\n");
   }
 }
-
