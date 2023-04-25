@@ -41,4 +41,14 @@ public class Common
     }
     Console.WriteLine("\b\b]\n");
   }
+  public static void printArrayOfDoubles(double[] array)
+  {
+    Console.WriteLine("This is your array:");
+    Console.Write("[");
+    foreach (var item in array)
+    {
+      Console.Write($"{item}, ");
+    }
+    Console.WriteLine("\b\b]\n");
+  }
 }
