@@ -1,7 +1,7 @@
 ﻿int prompt(string prompt)
 {
-  Console.Write($"{prompt}: ");
-  string input = Console.ReadLine();
+  Console.Write($"{prompt} (if empty - 42): ");
+  string input = Console.ReadLine() ?? "42";
   return int.Parse(input);
 }
 // Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и
