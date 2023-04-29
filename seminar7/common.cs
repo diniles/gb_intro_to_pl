@@ -6,7 +6,7 @@ public class Common
   {
     Console.Write($"{prompt}: ");
     string? input = Console.ReadLine();
-    if (input == null)
+    if (input == null || input == "")
     {
       input = "0";
     }
