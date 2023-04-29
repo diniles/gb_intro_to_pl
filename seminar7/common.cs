@@ -4,8 +4,8 @@ public class Common
 {
   public static int prompt(string prompt)
   {
-    Console.Write($"{prompt} (if empty - 42): ");
-    string input = Console.ReadLine() ?? "42";
+    Console.Write($"{prompt} (if empty - 0): ");
+    string input = Console.ReadLine() ?? "0";
     return int.Parse(input);
   }
 
