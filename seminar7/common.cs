@@ -51,4 +51,19 @@ public class Common
     }
     Console.WriteLine("\b\b]\n");
   }
+
+  public static double[,] fill2DArrayOfDoubles(int rows, int cols)
+  {
+    double[,] array = new double[rows, cols];
+    Random randomNumber = new Random();
+    for (int i = 0; i < array.GetLength(1); i++)
+    {
+      for (int j = 0; j < array.GetLength(2); j++)
+      {
+        array[i, j] = randomNumber.NextDouble() * 100;
+      }
+    }
+    return array;
+  }
+
 }
