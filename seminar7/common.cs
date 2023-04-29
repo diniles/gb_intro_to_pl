@@ -66,4 +66,17 @@ public class Common
     return array;
   }
 
+  public static void print2DArrayOfDoubles(double[,] array)
+  {
+    Console.WriteLine("This is your array:");
+    Console.Write("[");
+    for (int i = 0; i < array.GetLength(1); i++)
+    {
+      for (int j = 0; j < array.GetLength(2); j++)
+      {
+        Console.Write($"{array[i, j]}, ");
+      }
+    }
+    Console.WriteLine("\b\b]\n");
+  }
 }
