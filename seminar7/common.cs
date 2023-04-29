@@ -69,16 +69,40 @@ public class Common
   public static void print2DArrayOfDoubles(double[,] array)
   {
     Console.WriteLine("This is your array:");
-    // Console.Write("[");
     for (int i = 0; i < array.GetLength(0); i++)
     {
       for (int j = 0; j < array.GetLength(1); j++)
       {
-        // Console.Write($"{array[i, j]}, ");
         Console.Write("{0,6:F2}", array[i, j]);
       }
       Console.WriteLine();
     }
-    // Console.WriteLine("\b\b]\n");
+  }
+
+  public static int[,] fill2DArrayOfInts(int rows, int cols, int min, int max)
+  {
+    int[,] array = new int[rows, cols];
+    Random randomNumber = new Random();
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+      for (int j = 0; j < array.GetLength(1); j++)
+      {
+        array[i, j] = randomNumber.Next(min, max + 1);
+      }
+    }
+    return array;
+  }
+
+  public static void print2DArrayOfInts(int[,] array)
+  {
+    Console.WriteLine("This is your array:");
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+      for (int j = 0; j < array.GetLength(1); j++)
+      {
+        Console.Write($"{array[i, j]}, ");
+      }
+      Console.WriteLine();
+    }
   }
 }
