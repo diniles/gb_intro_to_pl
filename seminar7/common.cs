@@ -70,9 +70,9 @@ public class Common
   {
     Console.WriteLine("This is your array:");
     Console.Write("[");
-    for (int i = 0; i < array.GetLength(1); i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-      for (int j = 0; j < array.GetLength(2); j++)
+      for (int j = 0; j < array.GetLength(1); j++)
       {
         Console.Write($"{array[i, j]}, ");
       }
