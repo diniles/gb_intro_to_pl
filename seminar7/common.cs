@@ -4,7 +4,7 @@ public class Common
 {
   public static int prompt(string prompt)
   {
-    Console.Write($"{prompt}if empty - 0: ");
+    Console.Write($"{prompt} (if empty - 0): ");
     string? input = Console.ReadLine();
     if (input == null || input == "")
     {
