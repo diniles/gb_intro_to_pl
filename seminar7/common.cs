@@ -26,7 +26,7 @@ public class Common
     Random randomNumber = new Random();
     for (int i = 0; i < size; i++)
     {
-      array[i] = randomNumber.NextDouble();
+      array[i] = randomNumber.NextDouble() * 100;
     }
     return array;
   }
