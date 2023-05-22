@@ -13,6 +13,11 @@ public class Task54
 {
   public static void run()
   {
+    int rows = Common.prompt("Enter number of rows");
+    int cols = Common.prompt("Enter number of columns");
 
+    int[,] array = Common.fill2DArrayOfInts(rows, cols, 0, 99);
+
+    Common.print2DArrayOfInts(array);
   }
 }
