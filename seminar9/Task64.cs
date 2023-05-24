@@ -8,6 +8,29 @@ public class Task64
 {
   public static void run()
   {
+    int number = prompt("Enter a number");
+    Console.Write("\"");
+    printNaturals(number);
+    Console.Write("\b\b\"");
+  }
 
+  public static void printNaturals(int number)
+  {
+    if (number > 0)
+    {
+      Console.Write($"{number}, ");
+      printNaturals(number - 1);
+    }
+  }
+
+  public static int prompt(string prompt)
+  {
+    Console.Write($"{prompt} (if empty - 0): ");
+    string? input = Console.ReadLine();
+    if (input == null || input == "")
+    {
+      input = "0";
+    }
+    return int.Parse(input);
   }
 }
