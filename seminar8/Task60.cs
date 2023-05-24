@@ -14,7 +14,7 @@ public class Task60
     int y = Common.prompt("Enter number of y");
     int z = Common.prompt("Enter number of z");
 
-    int[,,] array = Common.fill3DArrayOfInts(x, y, z, 10, 99);
+    int[,,] array = Common.fill3DArrayOfUniqueInts(x, y, z, 10, 100);
 
     Common.print3DArrayOfInts(array);
   }
