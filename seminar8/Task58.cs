@@ -12,17 +12,56 @@ public class Task58
   public static void run()
   {
     int rows = Common.prompt("Enter number of rows");
-    int cols = Common.prompt("Enter number of columns (same as rows)");
+    int cols = Common.prompt("Enter number of columns");
 
-    int[][] firstMatrix = Common.fillJaggedArrayOfInts(rows, cols, 0, 9);
+    int[,] firstMatrix = Common.fill2DArrayOfInts(rows, cols, 0, 9);
+
 
     Console.WriteLine("First matrix");
-    Common.printJaggedArrayOfInts(firstMatrix);
+    Common.print2DArrayOfInts(firstMatrix);
 
-    int[][] secondMatrix = Common.fillJaggedArrayOfInts(rows, cols, 0, 9);
+
+    rows = Common.prompt("Enter number of rows");
+    cols = Common.prompt("Enter number of columns");
+    int[,] secondMatrix = Common.fill2DArrayOfInts(rows, cols, 0, 9);
 
     Console.WriteLine("\nSecond matrix");
-    Common.printJaggedArrayOfInts(secondMatrix);
+    Common.print2DArrayOfInts(secondMatrix);
 
+    // for test purpose only
+    // int[,] firstMatrix = new int[2, 2];
+    // firstMatrix[0, 0] = 2;
+    // firstMatrix[0, 1] = 4;
+    // firstMatrix[1, 0] = 3;
+    // firstMatrix[1, 1] = 2;
+
+    // int[,] secondMatrix = new int[2, 2];
+    // secondMatrix[0, 0] = 3;
+    // secondMatrix[0, 1] = 4;
+    // secondMatrix[1, 0] = 3;
+    // secondMatrix[1, 1] = 3;
+
+
+    if (firstMatrix.GetLength(1) != secondMatrix.GetLength(0))
+    {
+      throw new Exception("These matrices can not be multiplicated!");
+    }
+
+    Common.print2DArrayOfInts(matrixMultiplication(firstMatrix, secondMatrix));
+  }
+  public static int[,] matrixMultiplication(int[,] firstMatrix, int[,] secondMatrix)
+  {
+    int[,] result = new int[firstMatrix.GetLength(0), secondMatrix.GetLength(1)];
+    for (int i = 0; i < firstMatrix.GetLength(0); i++)
+    {
+      for (int j = 0; j < secondMatrix.GetLength(1); j++)
+      {
+        for (int k = 0; k < secondMatrix.GetLength(0); k++)
+        {
+          result[i, j] += firstMatrix[i, k] * secondMatrix[k, j];
+        }
+      }
+    }
+    return result;
   }
 }
