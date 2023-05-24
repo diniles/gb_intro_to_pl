@@ -11,6 +11,18 @@ public class Task58
 {
   public static void run()
   {
+    int rows = Common.prompt("Enter number of rows");
+    int cols = Common.prompt("Enter number of columns (same as rows)");
+
+    int[][] firstMatrix = Common.fillJaggedArrayOfInts(rows, cols, 0, 9);
+
+    Console.WriteLine("First matrix");
+    Common.printJaggedArrayOfInts(firstMatrix);
+
+    int[][] secondMatrix = Common.fillJaggedArrayOfInts(rows, cols, 0, 9);
+
+    Console.WriteLine("\nSecond matrix");
+    Common.printJaggedArrayOfInts(secondMatrix);
 
   }
 }
