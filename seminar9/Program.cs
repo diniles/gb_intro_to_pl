@@ -2,9 +2,9 @@
 {
   public static void Main(string[] args)
   {
-    // Console.WriteLine("Task 64 started\n");
-    // Task64.run();
-    // Console.WriteLine("\nTask 64 finished\n");
+    Console.WriteLine("Task 64 started\n");
+    Task64.run();
+    Console.WriteLine("\nTask 64 finished\n");
 
     // Console.WriteLine("Task 66 started\n");
     // Task66.run();
