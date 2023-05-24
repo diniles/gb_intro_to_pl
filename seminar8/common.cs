@@ -158,6 +158,34 @@ public class Common
     }
     return array;
   }
+
+  public static int[,,] fill3DArrayOfUniqueInts(int x, int y, int z, int min, int max)
+  {
+    int[,,] array = new int[x, y, z];
+    int[] exist = new int[x * y * z];
+    Random randomNumber = new Random();
+    int counter = 0;
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+      for (int j = 0; j < array.GetLength(1); j++)
+      {
+        for (int k = 0; k < array.GetLength(2); k++)
+        {
+          int number = randomNumber.Next(min, max);
+          while (exist.Contains(number))
+          {
+            number = randomNumber.Next(min, max);
+          }
+          exist[counter] = number;
+          counter++;
+          array[i, j, k] = number;
+
+        }
+      }
+    }
+    return array;
+  }
+
   public static void print3DArrayOfInts(int[,,] array)
   {
     Console.WriteLine("This is your array:");
