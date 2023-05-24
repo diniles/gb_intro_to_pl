@@ -10,6 +10,12 @@ public class Task60
 {
   public static void run()
   {
+    int x = Common.prompt("Enter number of x");
+    int y = Common.prompt("Enter number of y");
+    int z = Common.prompt("Enter number of z");
 
+    int[,,] array = Common.fill3DArrayOfInts(x, y, z, 10, 99);
+
+    Common.print3DArrayOfInts(array);
   }
 }

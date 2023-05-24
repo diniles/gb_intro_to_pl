@@ -167,10 +167,11 @@ public class Common
       {
         for (int k = 0; k < array.GetLength(2); k++)
         {
-          Console.Write($"{array[i, j, k]},({i},{j},{k})");
+          Console.Write($"{array[i, j, k]},({i},{j},{k}) ");
         }
+        Console.WriteLine();
       }
-      Console.WriteLine();
+
     }
   }
 }
