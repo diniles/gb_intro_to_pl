@@ -16,35 +16,35 @@ public class Task54
     int rows = Common.prompt("Enter number of rows");
     int cols = Common.prompt("Enter number of columns");
 
-    int[,] array = Common.fill2DArrayOfInts(rows, cols, 0, 99);
+    int[][] jaggedArray = Common.fillJaggedArrayOfInts(rows, cols, 0, 99);
 
-    Common.print2DArrayOfInts(array);
+    Console.WriteLine("Initial array");
+    Common.printJaggedArrayOfInts(jaggedArray);
 
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < jaggedArray.Length; i++)
     {
-      // array[0, i] = sortArray(array[0,i]);
-      int[] tmpArr = array[, i];
-      // Common.printArray(array[i, 0]);
+      jaggedArray[i] = sortArray(jaggedArray[i]);
     }
 
-    // Common.print2DArrayOfInts(array);
+    Console.WriteLine("\nSorted array");
+    Common.printJaggedArrayOfInts(jaggedArray);
   }
 
-  public static int[] sortArray(int[] array)
+  public static int[] sortArray(int[] jArray)
   {
-    int length = array.Length;
+    int length = jArray.Length;
     for (int i = 1; i < length; i++)
     {
       for (int j = 0; j < length - i; j++)
       {
-        if (array[j] < array[j + 1])
+        if (jArray[j] < jArray[j + 1])
         {
-          int temp = array[j];
-          array[j] = array[j + 1];
-          array[j + 1] = temp;
+          int temp = jArray[j];
+          jArray[j] = jArray[j + 1];
+          jArray[j + 1] = temp;
         }
       }
     }
-    return array;
+    return jArray;
   }
 }
