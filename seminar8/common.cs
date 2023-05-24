@@ -109,4 +109,34 @@ public class Common
       Console.WriteLine();
     }
   }
+  public static int[][] fillJaggedArrayOfInts(int rows, int cols, int min, int max)
+  {
+    int[][] jaggedArray = new int[rows][];
+    for (int i = 0; i < rows; i++)
+    {
+      jaggedArray[i] = new int[cols];
+    }
+    Random randomNumber = new Random();
+    for (int i = 0; i < jaggedArray.Length; i++)
+    {
+      for (int j = 0; j < jaggedArray[i].Length; j++)
+      {
+        jaggedArray[i][j] = randomNumber.Next(min, max + 1);
+      }
+    }
+    return jaggedArray;
+  }
+
+  public static void printJaggedArrayOfInts(int[][] jaggedArray)
+  {
+    Console.WriteLine("This is your array:");
+    for (int i = 0; i < jaggedArray.Length; i++)
+    {
+      for (int j = 0; j < jaggedArray[i].Length; j++)
+      {
+        Console.Write($"{jaggedArray[i][j]}, ");
+      }
+      Console.WriteLine();
+    }
+  }
 }
