@@ -140,4 +140,37 @@ public class Common
       Console.WriteLine();
     }
   }
+
+  public static int[,,] fill3DArrayOfInts(int x, int y, int z, int min, int max)
+  {
+    int[,,] array = new int[x, y, z];
+    Random randomNumber = new Random();
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+      for (int j = 0; j < array.GetLength(1); j++)
+      {
+        for (int k = 0; k < array.GetLength(2); k++)
+        {
+          array[i, j, k] = randomNumber.Next(min, max + 1);
+        }
+
+      }
+    }
+    return array;
+  }
+  public static void print3DArrayOfInts(int[,,] array)
+  {
+    Console.WriteLine("This is your array:");
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+      for (int j = 0; j < array.GetLength(1); j++)
+      {
+        for (int k = 0; k < array.GetLength(2); k++)
+        {
+          Console.Write($"{array[i, j, k]},({i},{j},{k})");
+        }
+      }
+      Console.WriteLine();
+    }
+  }
 }
