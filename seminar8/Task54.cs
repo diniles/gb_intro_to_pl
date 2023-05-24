@@ -19,5 +19,32 @@ public class Task54
     int[,] array = Common.fill2DArrayOfInts(rows, cols, 0, 99);
 
     Common.print2DArrayOfInts(array);
+
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+      // array[0, i] = sortArray(array[0,i]);
+      int[] tmpArr = array[, i];
+      // Common.printArray(array[i, 0]);
+    }
+
+    // Common.print2DArrayOfInts(array);
+  }
+
+  public static int[] sortArray(int[] array)
+  {
+    int length = array.Length;
+    for (int i = 1; i < length; i++)
+    {
+      for (int j = 0; j < length - i; j++)
+      {
+        if (array[j] < array[j + 1])
+        {
+          int temp = array[j];
+          array[j] = array[j + 1];
+          array[j + 1] = temp;
+        }
+      }
+    }
+    return array;
   }
 }
